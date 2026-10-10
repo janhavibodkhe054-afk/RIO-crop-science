@@ -171,7 +171,7 @@ const OurApproach = () => {
               Our Approach
             </p>
 
-            <h2 className="mt-2 text-[34px] sm:text-[40px] lg:text-[44px] leading-[1.12] tracking-[-0.4px] font-semibold text-[#173E2A]">
+            <h2 className="mt-2 text-[34px] sm:text-[40px] lg:text-[44px] leading-[1.12] tracking-[-0.4px] font-bold text-[#173E2A]">
               Our Approach to
               <span className="text-[#0284C7]"> Better Agriculture</span>
             </h2>

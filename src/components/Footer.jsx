@@ -183,24 +183,25 @@ const Footer = () => {
               <div className="mt-6 flex items-center gap-2.5">
                 {/* FACEBOOK */}
                 <a
-                  href="#facebook"
+                  href="https://www.facebook.com/share/1PwTaSStJE/?mibextid=wwXIfr"
                   aria-label="Facebook"
+                  target="_blank"
                   className="
-                    rio-footer-social
-                    w-11
-                    h-11
-                    rounded-xl
-                    bg-white/[0.05]
-                    border
-                    border-white/10
-                    flex
-                    items-center
-                    justify-center
-                    text-white/65
-                    hover:bg-[#176B43]
-                    hover:border-[#176B43]
-                    hover:text-white
-                  "
+      rio-footer-social
+      w-11
+      h-11
+      rounded-xl
+      bg-white/[0.05]
+      border
+      border-white/10
+      flex
+      items-center
+      justify-center
+      text-white/65
+      hover:bg-[#1877F2]
+      hover:border-[#1877F2]
+      hover:text-white
+    "
                 >
                   <svg
                     className="w-[17px] h-[17px] fill-current"
@@ -212,24 +213,25 @@ const Footer = () => {
 
                 {/* INSTAGRAM */}
                 <a
-                  href="#instagram"
+                  href="https://www.instagram.com/riocropscience?stkn=MTZjdXlwbDY1aTYwcg%3D%3D&utm_source=qr"
                   aria-label="Instagram"
+                  target="_blank"
                   className="
-                    rio-footer-social
-                    w-11
-                    h-11
-                    rounded-xl
-                    bg-white/[0.05]
-                    border
-                    border-white/10
-                    flex
-                    items-center
-                    justify-center
-                    text-white/65
-                    hover:bg-[#F58220]
-                    hover:border-[#F58220]
-                    hover:text-white
-                  "
+      rio-footer-social
+      w-11
+      h-11
+      rounded-xl
+      bg-white/[0.05]
+      border
+      border-white/10
+      flex
+      items-center
+      justify-center
+      text-white/65
+      hover:bg-[#E4405F]
+      hover:border-[#E4405F]
+      hover:text-white
+    "
                 >
                   <svg
                     className="w-[17px] h-[17px] fill-current"
@@ -239,32 +241,34 @@ const Footer = () => {
                   </svg>
                 </a>
 
-                {/* LINKEDIN */}
+                {/* WHATSAPP */}
                 <a
-                  href="#linkedin"
-                  aria-label="LinkedIn"
+                  href="https://wa.me/917517411590?text=Hello%20Rio%20Crop%20Science%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
                   className="
-                    rio-footer-social
-                    w-11
-                    h-11
-                    rounded-xl
-                    bg-white/[0.05]
-                    border
-                    border-white/10
-                    flex
-                    items-center
-                    justify-center
-                    text-white/65
-                    hover:bg-[#0284C7]
-                    hover:border-[#0284C7]
-                    hover:text-white
-                  "
+      rio-footer-social
+      w-11
+      h-11
+      rounded-xl
+      bg-white/[0.05]
+      border
+      border-white/10
+      flex
+      items-center
+      justify-center
+      text-white/65
+      hover:bg-[#25D366]
+      hover:border-[#25D366]
+      hover:text-white
+    "
                 >
                   <svg
-                    className="w-[17px] h-[17px] fill-current"
+                    className="w-[18px] h-[18px] fill-current"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3zm-1.5-12.268A1.764 1.764 0 1 1 8.25 4.968 1.757 1.757 0 0 1 6.5 6.732zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476z" />
+                    <path d="M20.52 3.48A11.78 11.78 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.6 5.92L.08 24l6.38-1.67a11.8 11.8 0 0 0 5.58 1.42h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.24-6.15-3.39-8.41zm-8.47 18.27h-.01a9.84 9.84 0 0 1-5.02-1.38l-.36-.21-3.79.99 1.01-3.69-.24-.38a9.8 9.8 0 0 1-1.5-5.22C2.13 6.42 6.57 1.98 12.04 1.98a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c0 5.45-4.44 9.87-9.89 9.87zm5.42-7.39c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.11 3.22 5.11 4.51.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z" />
                   </svg>
                 </a>
               </div>

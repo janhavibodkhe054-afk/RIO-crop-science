@@ -126,7 +126,7 @@ const ServicesCTA = () => {
                 </span>
               </div>
 
-              <h2 className="mt-3 max-w-[760px] text-[32px] sm:text-[39px] lg:text-[44px] leading-[1.12] tracking-[-0.4px] font-semibold text-[#173E2A]">
+              <h2 className="mt-3 max-w-[760px] text-[32px] sm:text-[39px] lg:text-[44px] leading-[1.12] tracking-[-0.4px] font-bold text-[#173E2A]">
                 Need the Right Support
                 <span className="block text-[#0284C7]">
                   for Your Crop or Business?

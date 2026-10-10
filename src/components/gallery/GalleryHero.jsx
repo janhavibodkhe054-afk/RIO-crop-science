@@ -133,7 +133,7 @@ const GalleryHero = () => {
                 </span>
               </div>
 
-              <h1 className="mt-3 max-w-[650px] text-[36px] sm:text-[44px] lg:text-[50px] leading-[1.08] tracking-[-0.5px] font-semibold text-[#173E2A]">
+              <h1 className="mt-3 max-w-[650px] text-[36px] sm:text-[44px] lg:text-[50px] leading-[1.08] tracking-[-0.5px] font-bold text-[#173E2A]">
                 Our Work.
                 <span className="block text-[#0284C7]">
                   Our Fields. Our Journey.

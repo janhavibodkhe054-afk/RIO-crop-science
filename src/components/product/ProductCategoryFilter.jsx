@@ -528,6 +528,45 @@ const products = [
     dose: "Drip: 2–5 liter/acre | Foliar Spray: 4–5 ml/ltr",
     color: "#0284C7",
   },
+    /* =========================================================
+     27 — HAEMULON
+  ========================================================= */
+  {
+    id: 27,
+    name: "Haemulon",
+    type: "Flowering Enhancer · Bio-Stimulant",
+    image: "/product27.png",
+    description:
+      "Haemulon is a flowering enhancer and bio-stimulant developed to support better flowering, flower retention and overall reproductive growth of crops.",
+    benefits: [
+      "Supports better flowering",
+      "Helps improve flower retention",
+      "Supports reproductive growth and crop performance",
+    ],
+    packing: "250ml",
+    dose: "Use as recommended for the crop",
+    color: "#176B43",
+  },
+
+  /* =========================================================
+     28 — BEMISIA
+  ========================================================= */
+  {
+    id: 28,
+    name: "Bemisia",
+    type: "White Fly Control",
+    image: "/product28.png",
+    description:
+      "Bemisia is developed for effective control of white fly in crops such as cotton and chilli.",
+    benefits: [
+      "Effective control of white fly",
+      "Suitable for cotton crops",
+      "Suitable for chilli crops",
+    ],
+    packing: "250ml, 500ml, 1 liter",
+    dose: "Foliar Spray: 2 ml/ltr of water",
+    color: "#0284C7",
+  },
 ];
 
 const ProductCategories = () => {

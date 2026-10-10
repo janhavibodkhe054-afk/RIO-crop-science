@@ -178,7 +178,7 @@ const WhyServicesMatter = () => {
                 </span>
               </div>
 
-              <h2 className="mt-3 max-w-[620px] text-[32px] sm:text-[38px] lg:text-[42px] leading-[1.12] tracking-[-0.4px] font-semibold text-white">
+              <h2 className="mt-3 max-w-[620px] text-[32px] sm:text-[38px] lg:text-[42px] leading-[1.12] tracking-[-0.4px] font-bold text-white">
                 Supporting Productivity
                 <span className="block text-[#56BDF0]">
                   Without Losing Sight of Sustainability

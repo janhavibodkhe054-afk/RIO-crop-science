@@ -457,7 +457,7 @@ const CoreServices = () => {
                 Our Core Services
               </p>
 
-              <h2 className="mt-2 text-[34px] sm:text-[40px] lg:text-[44px] leading-[1.12] tracking-[-0.4px] font-semibold text-[#173E2A]">
+              <h2 className="mt-2 text-[34px] sm:text-[40px] lg:text-[44px] leading-[1.12] tracking-[-0.4px] font-bold text-[#173E2A]">
                 Support Designed Around
                 <span className="text-[#0284C7]">
                   {" "}Better Farming
