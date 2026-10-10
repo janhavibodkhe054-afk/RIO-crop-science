@@ -2,8 +2,10 @@ import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const FloatingWhatsApp = () => {
-  const phoneNumber = "917517411590"; // तुमचा WhatsApp number
-  const message = "Hello, I am interested in your water storage tanks.";
+  const phoneNumber = "917517411590";
+
+  const message =
+    "Hello Rio Crop Science, I would like to know more about your agricultural products and solutions.";
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
@@ -38,7 +40,6 @@ const FloatingWhatsApp = () => {
     >
       <FaWhatsapp className="h-6 w-6 sm:h-7 sm:w-7" />
 
-      {/* Pulse Ring */}
       <span
         className="
           pointer-events-none absolute inset-0
