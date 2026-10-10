@@ -1,11 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  ArrowUpRight,
-} from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
   const quickLinks = [
@@ -66,7 +61,6 @@ const Footer = () => {
       `}</style>
 
       <footer className="relative overflow-hidden bg-[#071A12] text-white border-t border-white/10">
-
         {/* TOP BRAND LINE */}
         <div className="flex w-full h-[4px]">
           <span className="w-[42%] bg-[#7FBF5A]" />
@@ -123,10 +117,7 @@ const Footer = () => {
             ====================================== */}
 
             <div className="sm:col-span-2 lg:col-span-4">
-              <Link
-                to="/"
-                className="inline-flex items-center gap-3"
-              >
+              <Link to="/" className="inline-flex items-center gap-3">
                 <img
                   src="/logo.jpg"
                   alt="Rio Crop Science"
@@ -168,7 +159,7 @@ const Footer = () => {
                       text-[#8FD16C]
                     "
                   >
-                    Cultivating a Greener Tomorrow
+                    Excellence is our Standard
                   </p>
                 </div>
               </Link>
@@ -183,14 +174,13 @@ const Footer = () => {
                   text-white/65
                 "
               >
-                Supporting better agriculture through crop nutrition,
-                soil health, plant growth, crop protection and
-                farmer-focused agricultural solutions.
+                Supporting better agriculture through crop nutrition, soil
+                health, plant growth, crop protection and farmer-focused
+                agricultural solutions.
               </p>
 
               {/* SOCIAL ICONS */}
               <div className="mt-6 flex items-center gap-2.5">
-
                 {/* FACEBOOK */}
                 <a
                   href="#facebook"
@@ -394,50 +384,55 @@ const Footer = () => {
               <div className="mt-5 w-10 h-[2px] bg-[#F58220]" />
 
               <div className="mt-5 space-y-3">
-
                 {/* ADDRESS */}
                 <div
                   className="
-                    rio-footer-contact
-                    flex
-                    items-start
-                    gap-3.5
-                    rounded-xl
-                    border
-                    border-white/[0.06]
-                    bg-white/[0.025]
-                    p-3.5
-                  "
+    rio-footer-contact
+    flex
+    items-start
+    gap-3.5
+    rounded-xl
+    border
+    border-white/[0.06]
+    bg-white/[0.025]
+    p-3.5
+  "
                 >
                   <div
                     className="
-                      w-10
-                      h-10
-                      rounded-lg
-                      bg-[#F58220]/15
-                      text-[#F58220]
-                      flex
-                      items-center
-                      justify-center
-                      shrink-0
-                    "
+      w-10
+      h-10
+      rounded-lg
+      bg-[#F58220]/15
+      text-[#F58220]
+      flex
+      items-center
+      justify-center
+      shrink-0
+    "
                   >
                     <MapPin size={18} />
                   </div>
 
                   <p
                     className="
-                      text-[14px]
-                      sm:text-[15px]
-                      leading-6
-                      text-white/65
-                    "
+      text-[14px]
+      sm:text-[15px]
+      leading-6
+      text-white/65
+    "
                   >
-                    A-116 L, Chhatrapati Sambhajinagar
+                    <span className="font-semibold text-white/85">
+                      Rio Crop Science Pvt Ltd
+                    </span>
                     <br />
-                    Aurangabad – 431001
+                    Plot No. A-106/9, A Sector,
                     <br />
-                    Maharashtra, India
+                    Five Star Shendra MIDC,
+                    <br />
+                    Chhatrapati Sambhajinagar (Aurangabad),
+                    <br />
+                    Maharashtra – 431154
                   </p>
                 </div>
 
@@ -565,8 +560,8 @@ const Footer = () => {
                 leading-6
               "
             >
-              © {new Date().getFullYear()} Rio Crop Science Pvt. Ltd.
-              All Rights Reserved.
+              © {new Date().getFullYear()} Rio Crop Science Pvt. Ltd. All Rights
+              Reserved.
             </p>
 
             {/* DESIGNED DEVELOPED */}
@@ -585,7 +580,6 @@ const Footer = () => {
               "
             >
               Designed &amp; Developed by
-
               <a
                 href="https://www.hashgridtech.com/"
                 target="_blank"
@@ -603,7 +597,6 @@ const Footer = () => {
                 "
               >
                 HashGrid Technologies Pvt. Ltd.
-
                 <ArrowUpRight
                   size={14}
                   className="

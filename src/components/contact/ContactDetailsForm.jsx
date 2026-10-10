@@ -1,11 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock3,
-  Send,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Clock3, Send } from "lucide-react";
 
 const ContactDetailsForm = () => {
   const sectionRef = useRef(null);
@@ -33,7 +27,7 @@ const ContactDetailsForm = () => {
       {
         threshold: 0.08,
         rootMargin: "0px 0px -30px 0px",
-      }
+      },
     );
 
     if (sectionRef.current) {
@@ -82,9 +76,7 @@ const ContactDetailsForm = () => {
 
     if (!formData.email.trim()) {
       newErrors.email = "Please enter your email address.";
-    } else if (
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())
-    ) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
       newErrors.email = "Please enter a valid email address.";
     }
 
@@ -131,14 +123,10 @@ ${formData.message}
     `.trim();
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      whatsappMessage
+      whatsappMessage,
     )}`;
 
-    window.open(
-      whatsappUrl,
-      "_blank",
-      "noopener,noreferrer"
-    );
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   const isFormComplete =
@@ -310,9 +298,7 @@ ${formData.message}
 
             <div
               className={`space-y-5 sm:space-y-6 ${
-                visible
-                  ? "contact-left-show"
-                  : "opacity-0"
+                visible ? "contact-left-show" : "opacity-0"
               }`}
             >
               {/* CONTACT INFORMATION */}
@@ -355,7 +341,6 @@ ${formData.message}
                 </h2>
 
                 <div className="mt-6 divide-y divide-[#173E2A]/10">
-
                   {/* PHONE */}
                   <a
                     href="tel:+917517411590"
@@ -386,10 +371,7 @@ ${formData.message}
                         duration-300
                       "
                     >
-                      <Phone
-                        size={21}
-                        strokeWidth={1.8}
-                      />
+                      <Phone size={21} strokeWidth={1.8} />
                     </div>
 
                     <div>
@@ -449,10 +431,7 @@ ${formData.message}
                         duration-300
                       "
                     >
-                      <Mail
-                        size={21}
-                        strokeWidth={1.8}
-                      />
+                      <Mail size={21} strokeWidth={1.8} />
                     </div>
 
                     <div className="min-w-0">
@@ -508,10 +487,7 @@ ${formData.message}
                         shrink-0
                       "
                     >
-                      <MapPin
-                        size={21}
-                        strokeWidth={1.8}
-                      />
+                      <MapPin size={21} strokeWidth={1.8} />
                     </div>
 
                     <div>
@@ -530,20 +506,26 @@ ${formData.message}
 
                       <p
                         className="
-                          mt-1
-                          text-[15px]
-                          sm:text-[17px]
-                          leading-6
-                          sm:leading-7
-                          font-medium
-                          text-[#173E2A]
-                        "
+    mt-1
+    text-[15px]
+    sm:text-[17px]
+    leading-6
+    sm:leading-7
+    font-medium
+    text-[#173E2A]
+  "
                       >
-                        A-116 L, Chhatrapati Sambhajinagar
+                        <span className="font-semibold text-[#173E2A]">
+                          Rio Crop Science Pvt Ltd
+                        </span>
                         <br />
-                        Aurangabad – 431001
+                        Plot No. A-106/9, A Sector,
                         <br />
-                        Maharashtra, India
+                        Five Star Shendra MIDC,
+                        <br />
+                        Chhatrapati Sambhajinagar (Aurangabad),
+                        <br />
+                        Maharashtra – 431154
                       </p>
                     </div>
                   </div>
@@ -590,10 +572,7 @@ ${formData.message}
                         justify-center
                       "
                     >
-                      <Clock3
-                        size={21}
-                        strokeWidth={1.8}
-                      />
+                      <Clock3 size={21} strokeWidth={1.8} />
                     </div>
 
                     <div>
@@ -714,11 +693,7 @@ ${formData.message}
                 sm:p-8
                 lg:p-9
 
-                ${
-                  visible
-                    ? "contact-right-show"
-                    : "opacity-0"
-                }
+                ${visible ? "contact-right-show" : "opacity-0"}
               `}
             >
               <div className="max-w-[650px]">
@@ -747,9 +722,7 @@ ${formData.message}
                   "
                 >
                   Send Us Your
-                  <span className="text-[#0284C7]">
-                    {" "}Requirement
-                  </span>
+                  <span className="text-[#0284C7]"> Requirement</span>
                 </h2>
 
                 <p
@@ -761,9 +734,8 @@ ${formData.message}
                     text-[#5B675F]
                   "
                 >
-                  Share your requirement with us and our team will connect
-                  with you for the right product, support or partnership
-                  guidance.
+                  Share your requirement with us and our team will connect with
+                  you for the right product, support or partnership guidance.
                 </p>
               </div>
 
@@ -980,17 +952,11 @@ ${formData.message}
                       }
                     `}
                   >
-                    <option value="">
-                      Select enquiry type
-                    </option>
+                    <option value="">Select enquiry type</option>
 
-                    <option value="Product Enquiry">
-                      Product Enquiry
-                    </option>
+                    <option value="Product Enquiry">Product Enquiry</option>
 
-                    <option value="Farmer Support">
-                      Farmer Support
-                    </option>
+                    <option value="Farmer Support">Farmer Support</option>
 
                     <option value="Distributor Partnership">
                       Distributor Partnership
@@ -1000,9 +966,7 @@ ${formData.message}
                       Retailer Partnership
                     </option>
 
-                    <option value="General Enquiry">
-                      General Enquiry
-                    </option>
+                    <option value="General Enquiry">General Enquiry</option>
                   </select>
 
                   {errors.interest && (
@@ -1096,7 +1060,6 @@ ${formData.message}
                     `}
                   >
                     Send Enquiry
-
                     <Send
                       size={18}
                       className="
@@ -1110,7 +1073,8 @@ ${formData.message}
 
                   {!isFormComplete && (
                     <p className="mt-2 text-[12px] sm:text-[13px] text-[#7A877F]">
-                      Please complete all required fields to submit your enquiry.
+                      Please complete all required fields to submit your
+                      enquiry.
                     </p>
                   )}
                 </div>

@@ -1021,8 +1021,7 @@ const Navbar = () => {
                     whitespace-nowrap
                   "
                 >
-                  Cultivating a Greener
-                  Tomorrow
+                 Excellence is our Standard
                 </p>
               </div>
             </Link>
