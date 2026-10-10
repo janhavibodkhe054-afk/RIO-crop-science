@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+
 import {
   ArrowUpRight,
   Check,
@@ -8,288 +9,530 @@ import {
 } from "lucide-react";
 
 const products = [
+  /* =========================================================
+     01 — HUMIC GOLD
+  ========================================================= */
   {
     id: 1,
     name: "Humic Gold",
-    type: "Root Enhancer",
+    type: "Humic 98% · Root Enhancer",
     image: "/product1.png",
     description:
-      "HUMIC GOLD is a root enhancer containing shiny crystals. It increases root mass, fruit yield, and biomass of the plant. Reduces fertilizer doses by 20–25% and improves soil porosity, aeration, and water retention.",
+      "HUMIC GOLD is a root enhancer containing shiny crystals. It increases root mass, fruit yield and biomass of the plant while supporting better soil conditions.",
     benefits: [
       "Enhances root growth and biomass",
-      "Improves soil porosity and water retention",
-      "Reduces fertilizer need by 20–25%",
+      "Improves soil porosity, aeration and water retention",
+      "Helps reduce fertilizer doses by 20–25%",
     ],
     packing: "100gm, 250gm, 500gm, 1kg",
     dose: "Foliar Spray: 1.25–2.5 gm/ltr | Drip: 500gm–1kg/acre",
     color: "#176B43",
   },
+
+  /* =========================================================
+     02 — RIOVITA
+  ========================================================= */
   {
     id: 2,
     name: "Riovita",
     type: "Yield Enhancer",
     image: "/product2.png",
     description:
-      "Yield enhancer with humic, seaweed, amino acid, fulvic acid, and trace elements. Increases biomass, yield, root mass, and improves soil fertility.",
+      "Riovita is a yield enhancer containing humic, seaweed, amino acid, fulvic acid and trace elements. It supports root mass, fruit yield, biomass and soil fertility.",
     benefits: [
       "Contains Humic, Seaweed, Amino & Fulvic Acid",
-      "Improves root & plant biomass",
-      "Boosts microbial population in soil",
+      "Improves root and plant biomass",
+      "Supports microbial population in soil",
     ],
     packing: "100ml, 250ml, 500ml, 1000ml",
-    dose: "2.5–5 ml/ltr",
+    dose: "Foliar Spray: 2.5–5 ml/ltr",
     color: "#0284C7",
   },
+
+  /* =========================================================
+     03 — RIO BAHAAR
+  ========================================================= */
   {
     id: 3,
     name: "Rio Bahaar",
-    type: "Flowering Stimulant",
+    type: "Flowering Stimulant · Organic Extract",
     image: "/product3.png",
     description:
-      "Organic compound used as a plant energizer, flowering stimulant, and yield enhancer. Helps convert flowers to fruits.",
+      "Rio Bahaar is an organic compound used as a plant energizer, flowering stimulant and yield enhancer. It contains nutrients that support conversion of flowers into fruits.",
     benefits: [
-      "Boosts flowering and fruit set",
-      "Plant energizer with nutrients",
-      "Improves overall yield",
+      "Supports flowering and fruit setting",
+      "Works as a plant energizer",
+      "Supports overall crop yield",
     ],
     packing: "100ml, 250ml, 500ml, 1000ml",
-    dose: "2.5–5 ml/ltr",
+    dose: "Foliar Spray: 2.5–5 ml/ltr",
     color: "#F58220",
   },
+
+  /* =========================================================
+     04 — RIO NEEM KADU
+  ========================================================= */
   {
     id: 4,
     name: "Rio Neem Kadu",
-    type: "Insecticide",
+    type: "Pure Neem Seed Extract",
     image: "/product4.png",
     description:
-      "Makes plants bitter to pests. Controls a wide range of pests including aphids, whiteflies, spidermites, and scale insects.",
+      "Rio Neem Kadu is a natural neem-based insecticide that makes plants bitter to pests and helps manage a wide range of common crop pests.",
     benefits: [
-      "Natural neem extract",
-      "Effective against common pests",
-      "Safe for crops & soil microbes",
+      "Pure neem seed extract",
+      "Supports control of aphids and whiteflies",
+      "Useful against spidermites and scale insects",
     ],
     packing: "100ml, 250ml, 500ml, 1000ml",
-    dose: "2–5 ml/ltr",
+    dose: "Foliar Spray: 2–5 ml/ltr",
     color: "#176B43",
   },
+
+  /* =========================================================
+     05 — RIO POTASH
+  ========================================================= */
   {
     id: 5,
     name: "Rio Potash",
     type: "Organic Potash",
     image: "/product5.png",
     description:
-      "Essential macro nutrient for photosynthesis, water balance, enzyme activation, and fruit quality.",
+      "Rio Potash is an essential macro nutrient for plant growth and development. It supports photosynthesis, water balance, enzyme activation, fruit quality and sugar content.",
     benefits: [
-      "Improves sugar content and fruit size",
-      "Enhances cell wall development",
-      "Supports enzyme activation",
+      "Supports fruit size and sugar content",
+      "Supports cell wall development",
+      "Supports enzyme activation and plant processes",
     ],
     packing: "500ml, 1 liter",
-    dose: "2.5–5 ml/ltr | Drip: 500ml–1 liter/acre",
+    dose: "Foliar Spray: 2.5–5 ml/ltr | Drip: 500ml–1 liter/acre",
     color: "#0284C7",
   },
+
+  /* =========================================================
+     06 — PRABAL-60
+  ========================================================= */
   {
     id: 6,
     name: "Prabal-60",
     type: "Amino Acid",
     image: "/product6.png",
     description:
-      "Stimulates plant growth and supports stress tolerance, disease resistance, and protein synthesis.",
+      "Prabal-60 supports plant growth and development by providing essential nutrients for protein synthesis and helps plants during stress conditions.",
     benefits: [
-      "Promotes nutrient uptake",
-      "Improves fruit quality",
-      "Conditions soil and boosts resistance",
+      "Supports nutrient uptake",
+      "Supports fruit quality improvement",
+      "Helps with stress tolerance and soil conditioning",
     ],
     packing: "100ml, 250ml, 500ml, 1000ml",
-    dose: "2.5–5 ml/ltr",
+    dose: "Foliar Spray: 2.5–5 ml/ltr",
     color: "#F58220",
   },
+
+  /* =========================================================
+     07 — ROLLEX
+  ========================================================= */
   {
     id: 7,
     name: "Rollex",
-    type: "Organic Extract",
+    type: "Organic Extract · Yield Enhancer",
     image: "/product7.png",
     description:
-      "Yield enhancer that improves soil aeration and water retention while increasing microflora.",
+      "Rollex is a yield enhancer supporting root mass, fruit yield and plant biomass. It also supports soil porosity, aeration, water retention and microflora.",
     benefits: [
-      "Boosts biomass and root development",
-      "Reduces fertilizer requirement",
-      "Improves soil structure",
+      "Supports root development and biomass",
+      "Supports improved soil structure",
+      "Supports soil microbial population",
     ],
     packing: "1000ml, 2.5 liter",
-    dose: "2.5–5 ml/ltr | Drip: 2–2.5 liter/acre",
+    dose: "Foliar Spray: 2.5–5 ml/ltr | Drip: 2–2.5 liter/acre",
     color: "#176B43",
   },
+
+  /* =========================================================
+     08 — SHINE
+  ========================================================= */
   {
     id: 8,
     name: "Shine",
-    type: "Organic Extract",
+    type: "Organic Extract · Yield Enhancer",
     image: "/product8.png",
     description:
-      "Same as Rollex with emphasis on yield and root mass. Enhances soil porosity and microbial life.",
+      "Shine is a yield enhancer designed to support root mass, fruit yield and plant biomass while supporting aeration, water retention and soil microflora.",
     benefits: [
-      "Increases fruit yield",
-      "Supports healthy soil ecology",
-      "Improves nutrient retention",
+      "Supports fruit yield",
+      "Supports root and plant biomass",
+      "Supports healthier soil ecology",
     ],
     packing: "1000ml, 2.5 liter",
-    dose: "2.5–5 ml/ltr | Drip: 2–2.5 liter/acre",
+    dose: "Foliar Spray: 2.5–5 ml/ltr | Drip: 2–2.5 liter/acre",
     color: "#0284C7",
   },
+
+  /* =========================================================
+     09 — TANDAV
+  ========================================================= */
   {
     id: 9,
     name: "Tandav",
     type: "Plant Protector",
     image: "/product9.png",
     description:
-      "Protects against mites and thrips in crops like cotton, paddy, and chillies.",
+      "Tandav is a plant protector designed for effective control of mites and thrips across crops including cotton, paddy, chilli and horticultural crops.",
     benefits: [
-      "Effective on ornamental and horticulture crops",
-      "Controls mites and thrips",
+      "Supports control of mites",
+      "Supports control of thrips",
+      "Suitable for ornamental and horticulture crops",
     ],
     packing: "100ml, 250ml, 500ml, 1000ml",
-    dose: "2 ml/ltr",
+    dose: "Foliar Spray: 2 ml/ltr",
     color: "#F58220",
   },
+
+  /* =========================================================
+     10 — PRALAY
+  ========================================================= */
   {
     id: 10,
     name: "Pralay",
     type: "Plant Protector",
     image: "/product10.png",
     description:
-      "Used for effective control of mites and thrips. Ideal for a wide range of crops.",
+      "Pralay is a plant protector developed for effective control of mites and thrips in cotton, paddy, chilli and ornamental and horticulture crops.",
     benefits: [
-      "Powerful protection",
-      "Suitable for major crops",
+      "Effective crop protection support",
+      "Targets mites and thrips",
+      "Suitable across multiple crop categories",
     ],
     packing: "100ml, 250ml, 500ml, 1000ml",
-    dose: "2 ml/ltr",
+    dose: "Foliar Spray: 2 ml/ltr",
     color: "#176B43",
   },
+
+  /* =========================================================
+     11 — SPECTOR
+  ========================================================= */
   {
     id: 11,
     name: "Spector",
     type: "Plant Protector",
     image: "/product11.png",
     description:
-      "Effective against all stages of larva in cotton, paddy, and vegetable crops.",
+      "Spector is a plant protector developed for effective control of all stages of larva in cotton, paddy, chilli and ornamental and horticultural crops.",
     benefits: [
-      "Long-lasting larva control",
-      "Protects against chewing pests",
+      "Supports larval-stage control",
+      "Useful across major field crops",
+      "Suitable for horticulture applications",
     ],
     packing: "100ml, 250ml, 500ml, 1000ml",
-    dose: "2 ml/ltr",
+    dose: "Foliar Spray: 2 ml/ltr",
     color: "#0284C7",
   },
+
+  /* =========================================================
+     12 — HUNTER
+  ========================================================= */
   {
     id: 12,
     name: "Hunter",
     type: "Plant Protector",
     image: "/product12.png",
     description:
-      "Protects all stages of larva, suitable for cotton, paddy, chillies, and other vegetables.",
+      "Hunter is a plant protector developed for effective control of all stages of larva in crops including cotton, paddy, chilli and horticulture crops.",
     benefits: [
-      "Targets larva lifecycle",
+      "Targets different larval stages",
       "Broad crop application",
+      "Suitable for field and horticulture crops",
     ],
     packing: "100ml, 250ml, 500ml, 1000ml",
-    dose: "2 ml/ltr",
+    dose: "Foliar Spray: 2 ml/ltr",
     color: "#F58220",
   },
+
+  /* =========================================================
+     13 — HAEMULON
+  ========================================================= */
   {
     id: 13,
-    name: "Hydra-1",
-    type: "Plant Protector",
+    name: "Haemulon",
+    type: "Flowering Stimulant",
     image: "/product13.png",
     description:
-      "Powerful plant protector against larva, effective in low doses.",
+      "Haemulon is a flowering stimulant formulated with agricultural nutrients, amino acids and plant growth regulators designed to support flower production, fruit set and crop yield.",
     benefits: [
-      "Strong impact at 1 ml/ltr",
-      "Suitable for many crops",
+      "Supports flower production and fruit setting",
+      "Supports hormonal balance and plant vitality",
+      "Helps provide essential nutrients during flowering",
     ],
-    packing: "20ml, 50ml, 100ml, 250ml",
-    dose: "1 ml/ltr",
+    packing: "100ml, 250ml, 500ml, 1 liter",
+    dose: "Foliar Spray: 4–5 ml/ltr",
     color: "#176B43",
   },
+
+  /* =========================================================
+     14 — LEXICA
+  ========================================================= */
   {
     id: 14,
     name: "Lexica",
     type: "Plant Protector",
     image: "/product14.png",
     description:
-      "Effective control of aphids (mava) in major field and vegetable crops.",
+      "Lexica is a plant protector developed for effective control of aphids (mava) in cotton, paddy, chilli, ornamental and horticulture crops.",
     benefits: [
-      "Controls sap-sucking pests",
-      "Enhances plant recovery",
+      "Targets aphids and sap-sucking pests",
+      "Suitable across multiple crops",
+      "Supports crop recovery and protection",
     ],
     packing: "100ml, 250ml, 500ml, 1000ml",
-    dose: "2 ml/ltr",
+    dose: "Foliar Spray: 2 ml/ltr",
     color: "#0284C7",
   },
+
+  /* =========================================================
+     15 — BRIDGE
+  ========================================================= */
   {
     id: 15,
     name: "Bridge",
     type: "Micronutrient Mixture",
     image: "/product15.png",
     description:
-      "Essential micronutrients supporting photosynthesis and plant development.",
+      "Bridge provides essential micronutrients required by plants in small amounts for optimal growth and development and supports important physiological processes.",
     benefits: [
-      "Improves yield and growth",
-      "Optimizes photosynthesis",
+      "Supports plant growth and development",
+      "Supports crop yield",
+      "Supports photosynthesis",
     ],
     packing: "5kg",
-    dose: "2.5–5kg/acre",
+    dose: "2.5–5 kg/acre",
     color: "#F58220",
   },
+
+  /* =========================================================
+     16 — SILWET
+  ========================================================= */
   {
     id: 16,
     name: "Silwet",
-    type: "Silicon-Based Spreader",
+    type: "Silicon Base Spreader",
     image: "/product16.png",
     description:
-      "Non-toxic spray adjuvant used with various agrochemicals.",
+      "Silwet is a silicon-based, non-toxic spray adjuvant designed for use with herbicides, insecticides, fungicides, fertilizers and micronutrients.",
     benefits: [
-      "Improves chemical absorption",
-      "Silicon-based, safe and effective",
+      "Supports better spray spreading",
+      "Supports agrochemical absorption",
+      "Can be used with multiple agricultural inputs",
     ],
     packing: "50ml, 100ml, 250ml",
-    dose: "2.5–5 ml/12 liter of water",
+    dose: "Foliar Spray: 2.5–5 ml / 12 liter of water",
     color: "#176B43",
   },
+
+  /* =========================================================
+     17 — ANNAPURNA-DF
+  ========================================================= */
   {
     id: 17,
     name: "Annapurna-DF",
     type: "Micronutrient Mixture",
     image: "/product17.png",
     description:
-      "Micronutrient supplement to improve plant growth and productivity.",
+      "Annapurna-DF provides essential nutrients required in small amounts for optimal plant growth and development and supports important physiological processes.",
     benefits: [
-      "Boosts photosynthesis",
-      "Ensures optimal crop development",
+      "Supports plant growth and yield",
+      "Supports photosynthesis",
+      "Suitable for foliar and drip applications",
     ],
     packing: "5 liter",
-    dose: "2.5–5 ml/ltr | Drip: 2.5–5 liter/acre",
+    dose: "Foliar Spray: 2.5–5 ml/ltr | Drip: 2.5–5 liter/acre",
     color: "#0284C7",
   },
+
+  /* =========================================================
+     18 — RIOFERT-DF
+  ========================================================= */
   {
     id: 18,
     name: "Riofert-DF",
-    type: "Micronutrient Mixture",
+    type: "Complete Plant Nutrition",
     image: "/product18.png",
     description:
-      "Essential nutrients to optimize growth and physiological activity.",
+      "Riofert-DF provides essential nutrients required in small amounts for optimal growth and development while supporting physiological processes and photosynthesis.",
     benefits: [
-      "Improves yields",
-      "Promotes plant health",
+      "Supports crop growth",
+      "Supports yield development",
+      "Supports photosynthetic activity",
     ],
     packing: "5 liter",
-    dose: "2.5–5 ml/ltr | Drip: 2.5–5 liter/acre",
+    dose: "Foliar Spray: 2.5–5 ml/ltr | Drip: 2.5–5 liter/acre",
     color: "#F58220",
+  },
+
+  /* =========================================================
+     19 — MARISOL
+  ========================================================= */
+  {
+    id: 19,
+    name: "Marisol",
+    type: "Spirulina 10%",
+    image: "/product19.png",
+    description:
+      "Marisol is used in agriculture as an organic biofertilizer, plant growth biostimulant and nutrient-rich livestock feed supplement. It contains nitrogen, amino acids and minerals.",
+    benefits: [
+      "Biofertilizer and growth promoter",
+      "Nutritional support for crops",
+      "Supports soil health and environmental resilience",
+    ],
+    packing: "100ml, 250ml, 500ml, 1 liter",
+    dose: "2.5–5 ml/ltr of water",
+    color: "#176B43",
+  },
+
+  /* =========================================================
+     20 — HIGH GLOSS
+  ========================================================= */
+  {
+    id: 20,
+    name: "High Gloss",
+    type: "Biofungicide",
+    image: "/product20.png",
+    description:
+      "High Gloss is a biofungicide intended to support management of plant diseases such as root rot, wilt, powdery mildew and damping-off through biological disease-management approaches.",
+    benefits: [
+      "Supports disease management",
+      "Suitable for foliar and soil applications",
+      "Can be used for seed and root-zone treatment",
+    ],
+    packing: "100ml, 250ml, 500ml, 1 liter",
+    dose: "1.5–2 ml/ltr of water",
+    color: "#0284C7",
+  },
+
+  /* =========================================================
+     21 — KINGMAKER
+  ========================================================= */
+  {
+    id: 21,
+    name: "Kingmaker",
+    type: "Growth Special",
+    image: "/product21.png",
+    description:
+      "Kingmaker is a growth-focused nutritional solution designed for important crop stages including vegetative growth, flowering and fruiting while supporting soil health and crop performance.",
+    benefits: [
+      "Supports crop growth phases",
+      "Supports root and stem development",
+      "Supports yield, quality and nutrient availability",
+    ],
+    packing: "5kg",
+    dose: "Drip: 5–10 kg/acre",
+    color: "#F58220",
+  },
+
+  /* =========================================================
+     22 — ANNAPURNA COMBI KIT
+  ========================================================= */
+  {
+    id: 22,
+    name: "Annapurna Combi Kit",
+    type: "100% Water Soluble Micronutrient Mixture",
+    image: "/product22.png",
+    description:
+      "Annapurna Combi Kit is a balanced nutrient application designed to provide a precise blend of major and micronutrients according to crop and soil requirements.",
+    benefits: [
+      "Supports balanced nutrient application",
+      "Supports better crop growth and yield",
+      "Provides multiple nutrients in a single application",
+    ],
+    packing: "25kg, 50kg",
+    dose: "50–100 kg/acre",
+    color: "#176B43",
+  },
+
+  /* =========================================================
+     23 — ZAHRA
+  ========================================================= */
+  {
+    id: 23,
+    name: "Zahra",
+    type: "Flowering Special Fertilizer",
+    image: "/product23y.png",
+    description:
+      "Zahra is a flowering-special fertilizer designed to support robust flowering, fruit setting and balanced nutrient availability during critical reproductive stages.",
+    benefits: [
+      "Supports flowering and fruit setting",
+      "Supports reduced premature flower and fruit drop",
+      "Provides nutrients for reproductive growth",
+    ],
+    packing: "2kg",
+    dose: "Drip: 2–5 kg/acre",
+    color: "#0284C7",
+  },
+
+  /* =========================================================
+     24 — ADHIRA
+  ========================================================= */
+  {
+    id: 24,
+    name: "Adhira",
+    type: "Growth Special Fertilizer",
+    image: "/product24.png",
+    description:
+      "Adhira is a growth-special fertilizer designed for crop stages such as vegetative growth, flowering and fruiting while supporting plant structure and nutrient availability.",
+    benefits: [
+      "Supports crop growth stages",
+      "Supports root and stem development",
+      "Supports yield and crop quality",
+    ],
+    packing: "2kg",
+    dose: "Drip: 2–5 kg/acre",
+    color: "#F58220",
+  },
+
+  /* =========================================================
+     25 — STRONG BUD
+  ========================================================= */
+  {
+    id: 25,
+    name: "Strong Bud",
+    type: "For Maximum Bud",
+    image: "/product25.png",
+    description:
+      "Strong Bud is a ginger-special fertilizer formulated to support high nutrient demand, accelerated crop growth, stronger root systems and improved rhizome development.",
+    benefits: [
+      "Specially designed for ginger crops",
+      "Supports stronger root systems",
+      "Supports rhizome development and yield",
+    ],
+    packing: "1 liter",
+    dose: "Drip: 1–3 liter/acre | Foliar Spray: 4–5 ml/ltr",
+    color: "#176B43",
+  },
+
+  /* =========================================================
+     26 — BIGNESS-G
+  ========================================================= */
+  {
+    id: 26,
+    name: "Bigness-G",
+    type: "Increases Fruit Size & Weight",
+    image: "/product26.png",
+    description:
+      "Bigness-G is designed to support fruit size, weight, quality, lustre and crop productivity by supporting plant physiological and metabolic processes.",
+    benefits: [
+      "Supports fruit size and weight",
+      "Supports fruit quality, colour and lustre",
+      "Supports crop yield and nutrient metabolism",
+    ],
+    packing: "1 liter, 5 liter",
+    dose: "Drip: 2–5 liter/acre | Foliar Spray: 4–5 ml/ltr",
+    color: "#0284C7",
   },
 ];
 
 const ProductCategories = () => {
   const sectionRef = useRef(null);
+
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -301,9 +544,9 @@ const ProductCategories = () => {
         }
       },
       {
-        threshold: 0.05,
-        rootMargin: "0px 0px -40px 0px",
-      }
+        threshold: 0.04,
+        rootMargin: "0px 0px -30px 0px",
+      },
     );
 
     if (sectionRef.current) {
@@ -319,7 +562,7 @@ const ProductCategories = () => {
         @keyframes productCardReveal {
           from {
             opacity: 0;
-            transform: translateY(35px);
+            transform: translateY(32px);
           }
 
           to {
@@ -331,7 +574,7 @@ const ProductCategories = () => {
         @keyframes productHeaderReveal {
           from {
             opacity: 0;
-            transform: translateY(25px);
+            transform: translateY(24px);
           }
 
           to {
@@ -342,7 +585,7 @@ const ProductCategories = () => {
 
         .rio-products-header-show {
           animation:
-            productHeaderReveal .9s
+            productHeaderReveal .85s
             cubic-bezier(.16,1,.3,1)
             forwards;
         }
@@ -356,9 +599,9 @@ const ProductCategories = () => {
 
         .rio-product-card {
           transition:
-            transform .45s cubic-bezier(.16,1,.3,1),
-            box-shadow .45s ease,
-            border-color .45s ease;
+            transform .42s cubic-bezier(.16,1,.3,1),
+            box-shadow .42s ease,
+            border-color .42s ease;
         }
 
         .rio-product-card:hover {
@@ -374,13 +617,13 @@ const ProductCategories = () => {
 
         .rio-product-image {
           transition:
-            transform .8s
+            transform .75s
             cubic-bezier(.16,1,.3,1);
         }
 
         .rio-product-card:hover
         .rio-product-image {
-          transform: scale(1.05);
+          transform: scale(1.055);
         }
 
         .rio-check-icon {
@@ -393,6 +636,26 @@ const ProductCategories = () => {
           transform: scale(1.08);
         }
 
+        .rio-product-button {
+          transition:
+            background-color .3s ease,
+            transform .3s ease,
+            box-shadow .3s ease;
+        }
+
+        .rio-product-button:hover {
+          transform: translateY(-2px);
+          box-shadow:
+            0 10px 24px
+            rgba(23,107,67,.14);
+        }
+
+        @media (max-width: 639px) {
+          .rio-product-card:hover {
+            transform: none;
+          }
+        }
+
         @media (prefers-reduced-motion: reduce) {
           .rio-products-header-show,
           .rio-product-card-show {
@@ -400,200 +663,642 @@ const ProductCategories = () => {
             opacity: 1 !important;
             transform: none !important;
           }
+
+          .rio-product-image {
+            transition: none !important;
+          }
         }
       `}</style>
 
       <section
         ref={sectionRef}
-        className="relative overflow-hidden bg-[#F7F9F6] py-14 sm:py-16 lg:py-20"
+        className="
+          relative
+          overflow-hidden
+
+          bg-[#F7F9F6]
+
+          py-10
+          sm:py-14
+          lg:py-18
+        "
       >
         {/* BACKGROUND ACCENTS */}
-        <div className="absolute -right-[120px] top-[120px] w-[280px] h-[280px] rounded-full bg-[#F58220]/[0.05] pointer-events-none" />
+        <div
+          className="
+            absolute
+            -right-[110px]
+            top-[120px]
 
-        <div className="absolute -left-[120px] bottom-[100px] w-[280px] h-[280px] rounded-full bg-[#0284C7]/[0.04] pointer-events-none" />
+            w-[240px]
+            h-[240px]
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+            sm:w-[280px]
+            sm:h-[280px]
 
-          {/* HEADER */}
+            rounded-full
+
+            bg-[#F58220]/[0.045]
+
+            pointer-events-none
+          "
+        />
+
+        <div
+          className="
+            absolute
+            -left-[120px]
+            bottom-[100px]
+
+            w-[260px]
+            h-[260px]
+
+            rounded-full
+
+            bg-[#0284C7]/[0.035]
+
+            pointer-events-none
+          "
+        />
+
+        <div
+          className="
+            relative
+            z-10
+
+            max-w-[1400px]
+            mx-auto
+
+            px-4
+            sm:px-6
+            lg:px-8
+          "
+        >
+          {/* =================================================
+              HEADER
+          ================================================= */}
+
           <div
-            className={`max-w-[850px] mx-auto text-center ${
-              visible
-                ? "rio-products-header-show"
-                : "opacity-0"
-            }`}
+            className={`
+              max-w-[880px]
+              mx-auto
+
+              text-center
+
+              ${visible ? "rio-products-header-show" : "opacity-0"}
+            `}
           >
-            <div className="flex items-center justify-center gap-2">
+            <div
+              className="
+                flex
+                items-center
+                justify-center
+                gap-2
+              "
+            >
               <span className="w-7 h-[3px] bg-[#176B43]" />
+
               <span className="w-4 h-[3px] bg-[#0284C7]" />
+
               <span className="w-4 h-[3px] bg-[#F58220]" />
             </div>
 
-            <p className="mt-3 text-[12px] sm:text-[13px] uppercase tracking-[2px] font-semibold text-[#176B43]">
+            <p
+              className="
+                mt-3
+
+                text-[12px]
+                sm:text-[13px]
+
+                uppercase
+                tracking-[2px]
+
+                font-semibold
+
+                text-[#176B43]
+              "
+            >
               Rio Crop Science Products
             </p>
 
-            <h2 className="mt-2 text-[34px] sm:text-[42px] lg:text-[48px] leading-[1.1] font-bold text-[#173E2A]">
+            <h2
+              className="
+                mt-2
+
+                text-[32px]
+                sm:text-[42px]
+                lg:text-[50px]
+
+                leading-[1.08]
+
+                tracking-[-.8px]
+
+                font-bold
+
+                text-[#173E2A]
+              "
+            >
               Explore Our Complete
-              <span className="text-[#0284C7]">
-                {" "}Product Range
-              </span>
+              <span className="text-[#0284C7]"> Product Range</span>
             </h2>
 
-            <p className="mt-4 max-w-[720px] mx-auto text-[15px] sm:text-[16px] leading-7 text-[#536158]">
-              Explore agricultural solutions for root development, plant
-              nutrition, crop growth, flowering, crop protection and
-              application support.
+            <p
+              className="
+                mt-4
+
+                max-w-[760px]
+                mx-auto
+
+                text-[15px]
+                sm:text-[17px]
+
+                leading-7
+                sm:leading-8
+
+                text-[#536158]
+              "
+            >
+              Explore 26 agricultural solutions covering soil health, plant
+              nutrition, flowering, crop growth, crop protection, micronutrients
+              and specialised farming requirements.
             </p>
+
+            <div
+              className="
+                mt-5
+
+                inline-flex
+                items-center
+
+                rounded-full
+
+                bg-[#EEF7F1]
+
+                border
+                border-[#176B43]/10
+
+                px-4
+                py-2
+              "
+            >
+              <span
+                className="
+                  text-[13px]
+                  sm:text-[14px]
+
+                  font-semibold
+
+                  text-[#176B43]
+                "
+              >
+                26 Products
+              </span>
+            </div>
           </div>
 
-          {/* PRODUCTS GRID */}
-          <div className="mt-10 sm:mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+          {/* =================================================
+              PRODUCT GRID
+          ================================================= */}
+
+          <div
+            className="
+              mt-9
+              sm:mt-12
+
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              xl:grid-cols-3
+
+              gap-5
+              lg:gap-6
+            "
+          >
             {products.map((product, index) => {
               const whatsappUrl = `https://wa.me/917517411590?text=${encodeURIComponent(
-                `Hello, I'm interested in your product: ${product.name}. Please provide more details.`
+                `Hello Rio Crop Science, I'm interested in your product: ${product.name}. Please provide more details.`,
               )}`;
 
               return (
                 <article
-                  key={product.name}
+                  key={product.id}
                   style={{
-                    animationDelay: `${Math.min(index * 0.06, 0.6)}s`,
+                    animationDelay: `${Math.min(index * 0.045, 0.65)}s`,
                   }}
-                  className={`rio-product-card group bg-white border border-[#173E2A]/10 overflow-hidden flex flex-col ${
-                    visible
-                      ? "rio-product-card-show"
-                      : "opacity-0"
-                  }`}
+                  className={`
+                    rio-product-card
+                    group
+
+                    min-w-0
+
+                    bg-white
+
+                    border
+                    border-[#173E2A]/10
+
+                    rounded-[18px]
+                    sm:rounded-[20px]
+
+                    overflow-hidden
+
+                    flex
+                    flex-col
+
+                    ${visible ? "rio-product-card-show" : "opacity-0"}
+                  `}
                 >
-                  {/* PRODUCT IMAGE */}
-                  <div className="relative h-[270px] sm:h-[290px] overflow-hidden bg-[#EDF2ED]">
+                  {/* =============================================
+                      IMAGE
+                  ============================================== */}
+
+                  <div
+                    className="
+                      relative
+
+                      h-[245px]
+                      min-[400px]:h-[265px]
+                      sm:h-[285px]
+                      lg:h-[300px]
+
+                      overflow-hidden
+
+                      bg-gradient-to-b
+                      from-[#F4F7F3]
+                      to-[#E9F0EA]
+                    "
+                  >
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="rio-product-image w-full h-full object-contain p-5"
+                      loading="lazy"
+                      className="
+                        rio-product-image
+
+                        w-full
+                        h-full
+
+                        object-contain
+
+                        p-4
+                        sm:p-5
+                        lg:p-6
+                      "
                     />
 
-                    {/* PRODUCT NUMBER */}
-                    <div className="absolute top-4 right-4 min-w-[42px] h-[34px] px-3 bg-[#173E2A] text-white flex items-center justify-center text-[12px] font-semibold">
-                      {String(product.id).padStart(2, "0")}
-                    </div>
-
-                    {/* TYPE */}
+                    {/* NUMBER */}
                     <div
-                      className="absolute left-4 bottom-4 bg-white px-3.5 py-2 shadow-md text-[12px] sm:text-[13px] font-semibold"
-                      style={{
-                        color: product.color,
-                      }}
+                      className="
+                        absolute
+
+                        top-3
+                        right-3
+
+                        sm:top-4
+                        sm:right-4
+
+                        min-w-[40px]
+                        h-[32px]
+
+                        sm:min-w-[44px]
+                        sm:h-[34px]
+
+                        px-3
+
+                        
+
+                        bg-[#173E2A]
+
+                        text-white
+
+                        flex
+                        items-center
+                        justify-center
+
+                        text-[11px]
+                        sm:text-[12px]
+
+                        font-semibold
+                      "
                     >
-                      {product.type}
+                      {String(product.id).padStart(2, "0")}
                     </div>
                   </div>
 
-                  {/* PRODUCT CONTENT */}
-                  <div className="p-5 sm:p-6 flex flex-col flex-grow">
+                  {/* =============================================
+                      CONTENT
+                  ============================================== */}
 
+                  <div
+                    className="
+                      p-5
+                      sm:p-6
+
+                      flex
+                      flex-col
+                      flex-grow
+                    "
+                  >
                     {/* TITLE */}
-                    <div className="flex items-center justify-between gap-4">
-                      <h3 className="text-[23px] sm:text-[25px] leading-tight font-bold text-[#173E2A]">
+                    <div
+                      className="
+                        flex
+                        items-center
+                        justify-between
+
+                        gap-4
+                      "
+                    >
+                      <h3
+                        className="
+                          text-[22px]
+                          sm:text-[24px]
+                          lg:text-[25px]
+
+                          leading-tight
+
+                          font-bold
+
+                          text-[#173E2A]
+                        "
+                      >
                         {product.name}
                       </h3>
 
                       <span
-                        className="block w-9 h-[3px] shrink-0"
+                        className="
+                          block
+
+                          w-9
+                          h-[3px]
+
+                          shrink-0
+
+                          rounded-full
+                        "
                         style={{
-                          backgroundColor:
-                            product.color,
+                          backgroundColor: product.color,
                         }}
                       />
                     </div>
 
                     {/* DESCRIPTION */}
-                    <p className="mt-3 text-[14px] sm:text-[15px] leading-7 text-[#536158]">
+                    <p
+                      className="
+                        mt-3
+
+                        text-[14px]
+                        sm:text-[15px]
+
+                        leading-6
+                        sm:leading-7
+
+                        text-[#536158]
+                      "
+                    >
                       {product.description}
                     </p>
 
                     {/* BENEFITS */}
-                    <div className="mt-5 space-y-2.5">
+                    <div
+                      className="
+                        mt-5
+
+                        space-y-2.5
+                      "
+                    >
                       {product.benefits.map((benefit) => (
                         <div
                           key={benefit}
-                          className="flex items-start gap-2.5"
+                          className="
+                              flex
+                              items-start
+
+                              gap-2.5
+                            "
                         >
                           <span
-                            className="rio-check-icon mt-1 w-5 h-5 rounded-full flex items-center justify-center shrink-0"
+                            className="
+                                rio-check-icon
+
+                                mt-[2px]
+
+                                w-5
+                                h-5
+
+                                rounded-full
+
+                                flex
+                                items-center
+                                justify-center
+
+                                shrink-0
+                              "
                             style={{
-                              backgroundColor:
-                                `${product.color}13`,
-                              color:
-                                product.color,
+                              backgroundColor: `${product.color}13`,
+                              color: product.color,
                             }}
                           >
-                            <Check
-                              size={12}
-                              strokeWidth={2.3}
-                            />
+                            <Check size={12} strokeWidth={2.4} />
                           </span>
 
-                          <span className="text-[14px] sm:text-[15px] leading-6 text-[#405248]">
+                          <span
+                            className="
+                                text-[14px]
+                                sm:text-[15px]
+
+                                leading-6
+
+                                text-[#405248]
+                              "
+                          >
                             {benefit}
                           </span>
                         </div>
                       ))}
                     </div>
 
-                    {/* PACKING / DOSE */}
-                    <div className="mt-5 pt-5 border-t border-[#173E2A]/10 space-y-4">
-                      <div className="flex items-start gap-3">
+                    {/* PACKING + DOSE */}
+                    <div
+                      className="
+                        mt-5
+
+                        pt-5
+
+                        border-t
+                        border-[#173E2A]/10
+
+                        space-y-4
+                      "
+                    >
+                      {/* PACKING */}
+                      <div
+                        className="
+                          flex
+                          items-start
+
+                          gap-3
+                        "
+                      >
                         <Package
                           size={19}
-                          className="mt-[2px] shrink-0 text-[#176B43]"
+                          className="
+                            mt-[2px]
+
+                            shrink-0
+
+                            text-[#176B43]
+                          "
                         />
 
-                        <div>
-                          <p className="text-[11px] uppercase tracking-[1.2px] font-semibold text-[#7A877F]">
+                        <div className="min-w-0">
+                          <p
+                            className="
+                              text-[11px]
+
+                              uppercase
+                              tracking-[1.2px]
+
+                              font-semibold
+
+                              text-[#7A877F]
+                            "
+                          >
                             Packing
                           </p>
 
-                          <p className="mt-1 text-[14px] sm:text-[15px] font-medium text-[#293B31]">
+                          <p
+                            className="
+                              mt-1
+
+                              text-[14px]
+                              sm:text-[15px]
+
+                              leading-6
+
+                              font-medium
+
+                              text-[#293B31]
+                            "
+                          >
                             {product.packing}
                           </p>
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3">
+                      {/* DOSE */}
+                      <div
+                        className="
+                          flex
+                          items-start
+
+                          gap-3
+                        "
+                      >
                         <Droplets
                           size={19}
-                          className="mt-[2px] shrink-0 text-[#0284C7]"
+                          className="
+                            mt-[2px]
+
+                            shrink-0
+
+                            text-[#0284C7]
+                          "
                         />
 
-                        <div>
-                          <p className="text-[11px] uppercase tracking-[1.2px] font-semibold text-[#7A877F]">
+                        <div className="min-w-0">
+                          <p
+                            className="
+                              text-[11px]
+
+                              uppercase
+                              tracking-[1.2px]
+
+                              font-semibold
+
+                              text-[#7A877F]
+                            "
+                          >
                             Dose
                           </p>
 
-                          <p className="mt-1 text-[14px] sm:text-[15px] leading-6 font-medium text-[#293B31]">
+                          <p
+                            className="
+                              mt-1
+
+                              text-[14px]
+                              sm:text-[15px]
+
+                              leading-6
+
+                              font-medium
+
+                              text-[#293B31]
+                            "
+                          >
                             {product.dose}
                           </p>
                         </div>
                       </div>
                     </div>
 
-                    {/* WHATSAPP CTA */}
+                    {/* =============================================
+                        WHATSAPP CTA
+                    ============================================== */}
+
                     <div className="mt-auto pt-6">
                       <a
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group/button flex items-center justify-between gap-3 bg-[#176B43] text-white px-5 py-3.5 text-[15px] font-semibold hover:bg-[#0284C7] transition-all duration-300"
+                        className="
+                          rio-product-button
+                          group/button
+
+                          flex
+                          items-center
+                          justify-between
+
+                          gap-3
+
+                          w-full
+
+                          rounded-xl
+
+                          bg-[#176B43]
+
+                          text-white
+
+                          px-5
+                          py-3.5
+
+                          text-[14px]
+                          sm:text-[15px]
+
+                          font-semibold
+
+                          hover:bg-[#0284C7]
+                        "
                       >
-                        <span className="flex items-center gap-2">
+                        <span
+                          className="
+                            flex
+                            items-center
+
+                            gap-2
+                          "
+                        >
                           <MessageCircle size={18} />
                           Enquire Now
                         </span>
 
                         <ArrowUpRight
                           size={17}
-                          className="transition-transform duration-300 group-hover/button:rotate-45"
+                          className="
+                            transition-transform
+                            duration-300
+
+                            group-hover/button:rotate-45
+                          "
                         />
                       </a>
                     </div>
@@ -601,10 +1306,12 @@ const ProductCategories = () => {
 
                   {/* COLOR ACCENT */}
                   <div
-                    className="w-full h-[4px]"
+                    className="
+                      w-full
+                      h-[4px]
+                    "
                     style={{
-                      backgroundColor:
-                        product.color,
+                      backgroundColor: product.color,
                     }}
                   />
                 </article>
